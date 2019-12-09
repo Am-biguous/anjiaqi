@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/Am-biguous/anjiaqi.svg?branch=master)](https://travis-ci.org/Am-biguous/anjiaqi)
