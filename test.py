@@ -1,3 +1,3 @@
 from django.test import TestCase
-from novel.models import Animal
 
+print('Hello World')
