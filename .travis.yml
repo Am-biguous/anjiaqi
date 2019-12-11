@@ -3,7 +3,7 @@ python: "3.7.4"
 install:
 - pip install -q Django==$DJANGO_VERSION
 script:
-- python manage.py test
+- python test/test.py
 env:
 - DJANGO_VERSION=2.2.3
 deploy:
