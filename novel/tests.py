@@ -19,5 +19,4 @@ print("Operation done successfully")
 conn.close()'''
 print('Hello World')
 print('i like u')
-print('you are beautiful')
 
