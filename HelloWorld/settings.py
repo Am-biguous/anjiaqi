@@ -122,9 +122,24 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+#heroku 设置
+if os.getcwd()=='/app':  #获取当前目录
+    import dj_database_url
+    DATABASES = {
+        'default':dj_database_url.config(default='postgres://localhost')
+    }
 
-STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
+#让 request.is_secure()承认X-Forearded-Proto头
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
+
+
+#ALLOWED_HOSTS = ['localhost']
+
+#静态资源配置
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_ROOT = 'staticfiles'
+
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR,'static'),
 )
