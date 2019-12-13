@@ -39,7 +39,6 @@ def select(request):
     else:
         return HttpResponse("NAME NOT FIND,PLEASE BACK TO LAST PAGE")
 
-
 def insert(request):
     id = request.GET.get('id')
     pname = request.GET.get('pname')
