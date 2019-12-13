@@ -8,6 +8,18 @@ import json
 
 import psycopg2
 
+global database
+database = "ddpap3lpi9i19j"
+global user
+user = "fdfknkjncxjkoc"
+global password
+password = "28da3e8eba93e294a5edcb487a82d71a9b7b15cc17ad1e0f4000c4d265542b1c"
+global host
+host = "ec2-174-129-255-57.compute-1.amazonaws.com"
+global port
+port = "5432"
+
+
 def main_Index(request):
     return render(request, "main_index.html")
 
@@ -22,9 +34,12 @@ def pageDelete(request):
 def pageUpdate(request):
     return render(request, "update.html")
 
+
+
 def select(request):
+    print(database,user,password,host,port)
     pname = request.GET.get('pname')
-    conn = psycopg2.connect(database="postgres", user="postgres", password="123321", host="127.0.0.1", port="5432")
+    conn = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
 
     print("Opened database successfully")
 
@@ -42,7 +57,7 @@ def select(request):
 def insert(request):
     id = request.GET.get('id')
     pname = request.GET.get('pname')
-    conn = psycopg2.connect(database="postgres", user="postgres", password="123321", host="127.0.0.1", port="5432")
+    conn = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
 
     cur = conn.cursor()
 
@@ -53,7 +68,7 @@ def insert(request):
 def delete(request):
     id = request.GET.get('id')
 
-    conn = psycopg2.connect(database="postgres", user="postgres", password="123321", host="127.0.0.1", port="5432")
+    conn = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
 
     cur = conn.cursor()
     cur.execute("SELECT *  from text WHERE id ='" + id + "'")
@@ -69,7 +84,7 @@ def delete(request):
 def update(request):
     id = request.GET.get('id')
     pname = request.GET.get('pname')
-    conn = psycopg2.connect(database="postgres", user="postgres", password="123321", host="127.0.0.1", port="5432")
+    conn = psycopg2.connect(database=database, user=user, password=password, host=host, port=port)
 
     cur = conn.cursor()
 
