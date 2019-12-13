@@ -119,7 +119,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
-STATIC_URL = '/static/'
+
 
 
 #heroku 设置
@@ -132,11 +132,13 @@ if os.getcwd()=='/app':  #获取当前目录
 #让 request.is_secure()承认X-Forearded-Proto头
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
 
-
+ALLOWED_HOSTS=['*']
 #ALLOWED_HOSTS = ['localhost']
 
 #静态资源配置
-# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+STATIC_URL = '/static/'
 
 STATIC_ROOT = 'staticfiles'
 

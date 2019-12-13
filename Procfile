@@ -1,1 +1,1 @@
-web:gunicorn anjiaqi_log.wsgi  __log-file -
+web:gunicorn anjiaqi_log.wsgi --log-file -
