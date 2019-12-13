@@ -132,7 +132,7 @@ if os.getcwd()=='/app':  #获取当前目录
 #让 request.is_secure()承认X-Forearded-Proto头
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO','https')
 
-ALLOWED_HOSTS=["anjiaqi.herokuapp.com"]
+ALLOWED_HOSTS=['*']
 #ALLOWED_HOSTS = ['localhost']
 
 #静态资源配置
