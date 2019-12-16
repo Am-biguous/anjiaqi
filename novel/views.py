@@ -9,13 +9,13 @@ import json
 import psycopg2
 
 global database
-database = "ddpap3lpi9i19j"
+database = "ddn213vu2dpnh0"
 global user
-user = "fdfknkjncxjkoc"
+user = "rosnmsndxyeegf"
 global password
-password = "28da3e8eba93e294a5edcb487a82d71a9b7b15cc17ad1e0f4000c4d265542b1c"
+password = "950b47a248d011528d46bad1c24befeb05e0f68c88b457394512d35ba6e68854"
 global host
-host = "ec2-174-129-255-57.compute-1.amazonaws.com"
+host = "ec2-174-129-33-186.compute-1.amazonaws.com"
 global port
 port = "5432"
 
